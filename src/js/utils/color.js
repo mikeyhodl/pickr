@@ -15,7 +15,7 @@ function standardizeColor(name) {
 
     const ctx = document.createElement('canvas').getContext('2d');
     ctx.fillStyle = name;
-    return ctx.fillStyle === '#000' ? null : ctx.fillStyle;
+    return /^#0{3,6}$/.test(ctx.fillStyle) ? null : ctx.fillStyle;
 }
 
 /**
@@ -222,7 +222,7 @@ function hexToHsv(hex) {
 export function parseToHSVA(str) {
 
     // Check if string is a color-name
-    str = str.match(/^[a-zA-Z]+$/) ? standardizeColor(str) : str;
+    str = str.match(/^[a-zA-Z]+$/) ? standardizeColor(str) || str : str;
 
     // Regular expressions to match different types of color represention
     const regex = {
