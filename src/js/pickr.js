@@ -474,7 +474,7 @@ export default class Pickr {
             });
         }
 
-        if (options.autoReposition && !options.inline) {
+        if ((options.autoReposition || options.closeOnScroll) && !options.inline) {
             let timeout = null;
             const that = this;
 
