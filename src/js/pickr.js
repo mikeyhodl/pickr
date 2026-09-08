@@ -87,7 +87,11 @@ export default class Pickr {
     // Will be cancelled in case of destruction.
     _setupAnimationFrame = null;
 
+    // UI Components
+    _components = null;
+
     // Evenlistener name: [callbacks]
+    _eventBindings = [];
     _eventListener = {
         init: [],
         save: [],
@@ -704,8 +708,10 @@ export default class Pickr {
         this._eventBindings.forEach(args => _.off(...args));
 
         // Destroy sub-components
-        Object.keys(this._components)
-            .forEach(key => this._components[key].destroy());
+        if (this._components) {
+            Object.keys(this._components)
+                .forEach(key => this._components[key].destroy());
+        }
     }
 
     /**
@@ -788,10 +794,12 @@ export default class Pickr {
         this._color = HSVaColor(h, s, v, a);
 
         // Update slider and palette
-        const {hue, opacity, palette} = this._components;
-        hue.update((h / 360));
-        opacity.update(a);
-        palette.update(s / 100, 1 - (v / 100));
+        if (this._components) {
+            const {hue, opacity, palette} = this._components;
+            hue.update((h / 360));
+            opacity.update(a);
+            palette.update(s / 100, 1 - (v / 100));
+        }
 
         // Check if call is silent
         if (!silent) {
