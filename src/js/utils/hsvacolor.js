@@ -2,7 +2,7 @@ import {hsvToCmyk, hsvToHex, hsvToHsl, hsvToRgb} from './color';
 
 /**
  * Simple class which holds the properties
- * of the color represention model hsla (hue saturation lightness alpha)
+ * of the color representation model hsla (hue saturation lightness alpha)
  */
 export function HSVaColor(h = 0, s = 0, v = 0, a = 1) {
     const mapper = (original, next) => (precision = -1) => {
@@ -40,7 +40,7 @@ export function HSVaColor(h = 0, s = 0, v = 0, a = 1) {
             const hex = hsvToHex(that.h, that.s, that.v);
 
             // Check if alpha channel make sense, convert it to 255 number space, convert
-            // To hex and pad it with zeros if needet.
+            // To hex and pad it with zeros if needed.
             const alpha = that.a >= 1 ? '' : Number((that.a * 255).toFixed(0))
                 .toString(16)
                 .toUpperCase().padStart(2, '0');

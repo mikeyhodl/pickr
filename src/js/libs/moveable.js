@@ -147,7 +147,7 @@ export default function Moveable(opt) {
         }
     };
 
-    // Initilize
+    // Initialize
     const {options, _tapstart, _keyboard} = that;
     _.on([options.wrapper, options.element], 'mousedown', _tapstart);
     _.on([options.wrapper, options.element], 'touchstart', _tapstart, {

@@ -4,14 +4,14 @@
 
  1. Try [master](https://github.com/Simonwep/pickr/tree/master)-branch, perhaps the problem has been solved.
  2. [Use the search](https://github.com/Simonwep/pickr/search?type=Issues), maybe there is already an answer.
- 3. If not found, [create an issue](https://github.com/Simonwep/pickr/issues/new), please dont forget to carefully describe it how to reproduce it / pay attention to the issue-template. If possible, provide a [JSFiddle](https://jsfiddle.net/).
+ 3. If not found, [create an issue](https://github.com/Simonwep/pickr/issues/new), please don't forget to carefully describe how to reproduce it / pay attention to the issue-template. If possible, provide a [JSFiddle](https://jsfiddle.net/).
 
 ***
 
 ### Pull Request
 
  1. Before a Pull request run `npm run build`.
- 2. Please take care about basic commit message convetions, see [Writing Good Commit Messages](https://github.com/erlang/otp/wiki/writing-good-commit-messages).
+ 2. Please take care about basic commit message conventions, see [Writing Good Commit Messages](https://github.com/erlang/otp/wiki/writing-good-commit-messages).
  3. Pull requests only into [master](https://github.com/Simonwep/pickr/tree/master)-branch.
 
 ***
@@ -22,8 +22,8 @@ This project requires [npm](https://nodejs.org/en/).
 
  1. Fork this repo on [github](https://github.com/Simonwep/pickr).
  2. Clone locally.
- 3. From your local repro run `npm install`.
- 4. Run lcoal dev server `npm run dev` and go to `http://localhost:8080/`
+ 3. From your local repo run `npm install`.
+ 4. Run local dev server `npm run dev` and go to `http://localhost:8080/`
 
 ### Online setup with a single click
 

@@ -68,7 +68,7 @@ export default class Pickr {
         closeWithKey: 'Escape'
     };
 
-    // Will be used to prevent specific actions during initilization
+    // Will be used to prevent specific actions during initialization
     _initializingActive = true;
 
     // If the current color value should be recalculated
@@ -146,7 +146,7 @@ export default class Pickr {
         button.setAttribute('role', 'button');
         button.setAttribute('aria-label', this._t('btn:toggle'));
 
-        // Initilization is finish, pickr is visible and ready for usage
+        // Initialization is finished, pickr is visible and ready for usage
         const that = this;
         this._setupAnimationFrame = requestAnimationFrame((function cb() {
 
@@ -179,7 +179,7 @@ export default class Pickr {
     // Create instance via method
     static create = options => new Pickr(options);
 
-    // Does only the absolutly basic thing to initialize the components
+    // Does only the absolutely basic thing to initialize the components
     _preBuild() {
         const {options} = this;
 
@@ -219,7 +219,7 @@ export default class Pickr {
             opt.container.appendChild(root.app);
         }
 
-        // Don't replace the the element if a custom button is used
+        // Don't replace the element if a custom button is used
         if (!opt.useAsButton) {
 
             // Replace element with actual color-picker
@@ -228,7 +228,7 @@ export default class Pickr {
             opt.el.remove();
         }
 
-        // Check if it should be immediatly disabled
+        // Check if it should be immediately disabled
         if (opt.disabled) {
             this.disable();
         }
@@ -405,7 +405,7 @@ export default class Pickr {
             // User input
             _.on(_root.interaction.result, ['keyup', 'input'], e => {
 
-                // Fire listener if initialization is finish and changed color was valid
+                // Fire listener if initialization is finished and changed color was valid
                 if (this.setColor(e.target.value, true) && !this._initializingActive) {
                     this._emit('change', this._color, 'input', this);
                     this._emit('changestop', 'input', this);
@@ -543,7 +543,7 @@ export default class Pickr {
                 _color[method]().toString(options.outputPrecision) : '';
         }
 
-        // Fire listener if initialization is finish
+        // Fire listener if initialization is finished
         if (!this._initializingActive && this._recalc) {
             this._emit('change', _color, eventSource, this);
         }
@@ -682,7 +682,7 @@ export default class Pickr {
             button.style.setProperty('--pcr-color', cssRGBaString);
         }
 
-        // User changed the color so remove the clear clas
+        // User changed the color so remove the clear class
         button.classList.remove('clear');
 
         // Save last color
@@ -697,7 +697,7 @@ export default class Pickr {
     }
 
     /**
-     * Destroy's all functionalitys
+     * Destroys all functionalities
      */
     destroy() {
 
@@ -715,7 +715,7 @@ export default class Pickr {
     }
 
     /**
-     * Destroy's all functionalitys and removes
+     * Destroys all functionalities and removes
      * the pickr element.
      */
     destroyAndRemove() {
@@ -869,7 +869,7 @@ export default class Pickr {
      */
     setColorRepresentation(type) {
 
-        // Force uppercase to allow a case-sensitiv comparison
+         // Force uppercase to allow a case-sensitive comparison
         type = type.toUpperCase();
 
         // Find button with given type and trigger click event
@@ -878,7 +878,7 @@ export default class Pickr {
     }
 
     /**
-     * Returns the current color representaion. See setColorRepresentation
+     * Returns the current color representation. See setColorRepresentation
      * @returns {*}
      */
     getColorRepresentation() {

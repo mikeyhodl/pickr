@@ -11,7 +11,7 @@ pickr.on('init', instance => {
     // Listen to any key-events
     result.addEventListener('keydown', e => {
 
-        // Detect whever the user pressed "Enter" on their keyboard
+        // Detect whether the user pressed "Enter" on their keyboard
         if (e.key === 'Enter') {
             instance.applyColor(); // Save the currently selected color
             instance.hide(); // Hide modal
