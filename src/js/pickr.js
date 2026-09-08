@@ -156,7 +156,7 @@ export default class Pickr {
             }
 
             // Apply default color
-            that.setColor(opt.default);
+            that.setColor(that._color?.toHSLA().toString() ?? opt.default);
             that._rePositioningPicker();
 
             // Initialize color representation

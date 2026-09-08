@@ -129,6 +129,8 @@ for (const [theme, config] of themes) {
             default: '#42445a'
         }, config));
 
+        pickr.setColor(`#FF0000`);
+
         // Set events
         pickr.on('init', instance => {
             console.log('Event: "init"', instance);
