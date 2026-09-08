@@ -1,4 +1,5 @@
 .idea
 .env
+.eslintcache
 node_modules
 dist

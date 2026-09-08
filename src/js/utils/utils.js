@@ -1,4 +1,3 @@
-/* eslint-disable prefer-rest-params */
 function eventListener(method, elements, events, fn, options = {}) {
 
     // Normalize array
@@ -117,7 +116,7 @@ export function eventPath(evt) {
 
     let el = evt.target.parentElement;
     path = [evt.target, el];
-    while (el = el.parentElement) {
+    while ((el = el.parentElement)) {
         path.push(el);
     }
 

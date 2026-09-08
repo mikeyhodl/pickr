@@ -26,8 +26,7 @@ export default function Moveable(opt) {
                 const left = key === 'ArrowLeft';
 
                 if (type === 'keydown' && (up || right || down || left)) {
-                    let xm = 0;
-                    let ym = 0;
+                    let xm, ym = 0;
 
                     if (lock === 'v') {
                         xm = (up || right) ? 1 : -1;

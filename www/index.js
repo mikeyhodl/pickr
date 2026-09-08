@@ -144,7 +144,7 @@ for (const [theme, config] of themes) {
             console.log('Event: "change"', color, source, instance);
         }).on('changestop', (source, instance) => {
             console.log('Event: "changestop"', source, instance);
-        }).on('cancel', instance => {
+        }).on('cancel', () => {
             console.log('cancel', pickr.getColor().toRGBA().toString(0));
         }).on('swatchselect', (color, instance) => {
             console.log('Event: "swatchselect"', color, instance);
